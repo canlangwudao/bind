@@ -1,4 +1,21 @@
 <p>
   bind works!
 </p>
-<button (click)="doOnClick($event)">点我</button>
+
+<br>
+<input value="tom" (input)="doOnInput($event)"><br>
+<input [attr.value]="tom" (input)="doOnInput($event)">{{tom}}<br>
+<input [value]="tom" (input)="doOnInput($event)">{{tom}}<br>
+<button (click)="doOnClick($event)" disabled='false'>点我1</button>
+<button (click)="doOnClick($event)" disabled='{{disabledjyoutai}}'>点我2</button>
+<button (click)="doOnClick($event)" [disabled]='false'>点我3</button>
+<button (click)="doOnClick($event)" [disabled]='disabledjyoutai'>点我4</button>
+<br>
+<img [src]="imgUrl"><br>
+<img src="{{imgUrl}}"><br>
+
+
+<input [value]="json" (input)="doOnInput($event)">{{json}}<br>
+
+<input [(ngModel)]='cat' > {{cat}}
+
